@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: .28px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="cls-1" points="5.62 17.02 6.21 18.81 6.21 20"/>
+    <polyline class="cls-1" points="6.21 16.02 6.81 17.81 6.81 19"/>
+    <polyline class="cls-1" points="3.23 16.02 2.64 17.81 2.64 19"/>
+    <polyline class="cls-1" points="2.64 17.02 2.04 18.81 2.04 20"/>
+    <ellipse class="cls-2" cx="4.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="6.81" cy="14.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="15.62 16.02 16.21 17.81 16.21 19"/>
+    <polyline class="cls-1" points="16.21 17.02 16.81 18.81 16.81 20"/>
+    <polyline class="cls-1" points="13.23 17.02 12.64 18.81 12.64 20"/>
+    <polyline class="cls-1" points="12.64 16.02 12.04 17.81 12.04 19"/>
+    <ellipse class="cls-2" cx="14.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="16.81" cy="14.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="5.62 26 6.21 27.79 6.21 28.98"/>
+    <polyline class="cls-1" points="6.21 26 6.81 27.79 6.81 28.98"/>
+    <polyline class="cls-1" points="3.23 27.02 2.64 28.81 2.64 30"/>
+    <polyline class="cls-1" points="2.64 27.02 2.04 28.81 2.04 30"/>
+    <ellipse class="cls-2" cx="4.13" cy="25.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="6.81" cy="24.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="5.62 36.02 6.21 37.81 6.21 39"/>
+    <polyline class="cls-1" points="6.21 36.02 6.81 37.81 6.81 39"/>
+    <polyline class="cls-1" points="3.23 36.02 2.64 37.81 2.64 39"/>
+    <polyline class="cls-1" points="2.64 36.02 2.04 37.81 2.04 39"/>
+    <ellipse class="cls-2" cx="4.13" cy="35.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="6.81" cy="34.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="15.62 37.02 16.21 38.81 16.21 40"/>
+    <polyline class="cls-1" points="16.21 37.02 16.81 38.81 16.81 40"/>
+    <polyline class="cls-1" points="13.23 36.02 12.64 37.81 12.64 39"/>
+    <polyline class="cls-1" points="12.64 36.02 12.04 37.81 12.04 39"/>
+    <ellipse class="cls-2" cx="14.13" cy="35.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="16.81" cy="34.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="5.62 7.02 6.21 8.81 6.21 10"/>
+    <polyline class="cls-1" points="6.21 7.02 6.81 8.81 6.81 10"/>
+    <polyline class="cls-1" points="3.23 7.02 2.64 8.81 2.64 10"/>
+    <polyline class="cls-1" points="2.64 7.02 2.04 8.81 2.04 10"/>
+    <ellipse class="cls-2" cx="4.13" cy="5.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="6.81" cy="4.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="15.62 26.02 16.21 27.81 16.21 29"/>
+    <polyline class="cls-1" points="16.21 26.02 16.81 27.81 16.81 29"/>
+    <polyline class="cls-1" points="13.23 26 12.64 27.79 12.64 28.98"/>
+    <polyline class="cls-1" points="12.64 26 12.04 27.79 12.04 28.98"/>
+    <ellipse class="cls-2" cx="14.13" cy="25.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="16.81" cy="24.64" r="1.19"/>
+  </g>
+</svg>
