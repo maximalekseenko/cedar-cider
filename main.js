@@ -1,4 +1,4 @@
-import {Game} from "./game.js";
+import { Game } from "./game.js";
 
 
 window.addEventListener('load', () => {
@@ -20,11 +20,12 @@ window.addEventListener('load', () => {
 
 
 
-    game.Initialize(canvas);
-
-    function animate() {
+    function Animate() {
         game.Render(ctx);
-        requestAnimationFrame(animate);
+        requestAnimationFrame(Animate);
     }
-    animate()
+
+    game.Initialize(canvas).then(
+        Animate
+    );
 })
