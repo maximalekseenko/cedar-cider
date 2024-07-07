@@ -48,11 +48,12 @@
 
 <body>
     <div class="container">
-        <div>
+        <div class="container">
             <a id="cedar-text">...await...</a>
             <img src="./img/IMG_3282.png" id="cedar-img">
         </div>
     </div>
+
     <script>
         console.log(document.cookie == "");
         const TEXT_PUNS = [
@@ -67,7 +68,9 @@
             document.cookie = "visited=yes; path=/;";
         else TEXT_PUNS.push(
             "I've just broke the record for cuteness...<br>...or a record holder at least.",
-            "I'm too young to drink alcohol,<br>so I drink the blood of my enemies.")
+            "I'm too young to drink alcohol,<br>so I drink the blood of my enemies.",
+            "Impending \"Awww<3\" approaches"
+        )
         document.getElementById("cedar-text").innerHTML = TEXT_PUNS[Math.floor((Math.random() * TEXT_PUNS.length))];
     </script>
 </body>
