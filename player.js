@@ -1,4 +1,4 @@
-import { AppVisuals } from "./visuals.js"
+import * as visualsModule from "./visuals.js"
 
 export class Player {
 
@@ -9,9 +9,9 @@ export class Player {
         this.h = 100;
 
         /**
-         * @type {HTMLImageElement}
+         * @type {VisualImage}
          */
-        this.image = AppVisuals.GetImage("./img/Temporary horror.svg")
+        this.visualImage = visualsModule.MakeVisualImage("./img/Temporary horror")
     }
 
     /**
@@ -19,11 +19,6 @@ export class Player {
      * @param {CanvasRenderingContext2D} __context
      */
     Render(__context) {
-        console.log(this.image);
-        __context.drawImage(
-            this.image,
-            0, 0, this.w, this.h,
-            this.x, this.y, this.w, this.h
-        );
+        this.visualImage.Draw(__context, this.w, this.h);
     }
 }

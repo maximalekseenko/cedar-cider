@@ -1,5 +1,5 @@
 import { Player } from "./player.js";
-import { AppVisuals } from "./visuals.js"
+import * as visualsModule from "./visuals.js"
 
 /**
  * 
@@ -9,6 +9,7 @@ export class Game {
 
         this.player;
     }
+
 
     /**
      * 
@@ -20,10 +21,11 @@ export class Game {
         __canvas.height = 500;
 
         await Promise.all([
-            AppVisuals.LoadImage("./img/Temporary horror.svg")
+            visualsModule.LoadImage("./img/Temporary horror", "svg")
         ]);
         this.player = new Player();
     }
+
 
     /**
      * 
