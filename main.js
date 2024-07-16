@@ -1,22 +1,22 @@
 import { Game } from "./game.js";
 
 
+/**
+ * @type {Game}
+ */
+export const game = new Game();
+
 window.addEventListener('load', () => {
 
     /**
      * @type {HTMLCanvasElement}
      */
-    const canvas = document.getElementById('runner-canvas');
+    const canvas = document.getElementById('canvas');
 
     /**
      * @type {CanvasRenderingContext2D}
      */
     const ctx = canvas.getContext('2d');
-
-    /**
-     * @type {Game}
-     */
-    const game = new Game();
 
 
 

@@ -6,19 +6,40 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
+
 <body>
-    <!-- <a class="warning rotate-warning">↳ Rotate your phone! ↰</a> -->
+    <header></header>
 
     <div class="canvas-holder">
-        <canvas id="runner-canvas"></canvas>
+        <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div style="
+            width: 30%;
+            background: gray center / auto 100% no-repeat url('');
+            ">
+            <div style="display: flex; flex-direction: column;">
+                <h1 style="text-align: center; background-color: gainsboro;">Press to play animation</h1>
+                <button style="height: 2em;" onclick="module.Anim('idle')">Idle</button>
+                <button style="height: 2em;" onclick="module.Anim('run')">Run</button>
+                <button style="height: 2em;" onclick="module.Anim('jump_up')">Jump_up</button>
+                <button style="height: 2em;" onclick="module.Anim('jump_down')">Jump_down</button>
+            </div>
+
+        </div>
     </div>
 
     <footer>
-        <a class="author">made by maxim alekseenko</a>
+        <a class="author">made by maximalekseenko</a>
         <a class="owner">made for riptide</a>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <!-- <script type="module" src="main.js"></script> -->
+     <script>const module = {}</script>
+    <script type="module">
+        import {game} from "./main.js" ;
+        module.Anim = function(name) { game.player.visualImage.StartAnimation(name) }
+    </script>
 </body>
 
 

@@ -17,8 +17,8 @@ export class Game {
      */
     async Initialize(__canvas) {
 
-        __canvas.width = 600;
-        __canvas.height = 600;
+        __canvas.width = 750;
+        __canvas.height = 500;
 
         await Promise.all([
             visualsModule.LoadImage("./img/Temporary horror", "svg")
