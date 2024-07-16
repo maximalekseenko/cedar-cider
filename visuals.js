@@ -184,7 +184,6 @@ export class VisualImageAnimated extends VisualImage {
                     { length: _animation_data.frames.length },
                     (_, _frame_index) => _frame_index / _animation_data.frames.length
                 );
-                console.log(_animation_data.timestamps);
         }
 
 

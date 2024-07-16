@@ -34,5 +34,23 @@ export class Game {
     Render(__context) {
         __context.clearRect(0,0, __context.canvas.width, __context.canvas.height);
         this.player.Render(__context);
+
+        __context.moveTo(5,100);
+        __context.lineTo(5,5);
+        __context.lineTo(100,5);
+
+        __context.moveTo(650,5);
+        __context.lineTo(745,5);
+        __context.lineTo(745,100);
+        
+        __context.moveTo(745,400);
+        __context.lineTo(745,495);
+        __context.lineTo(650,495);
+        
+        __context.moveTo(100,495);
+        __context.lineTo(5,495);
+        __context.lineTo(5,400);
+        __context.lineWidth = 1;
+        __context.stroke();
     }
 }

@@ -25,7 +25,5 @@ window.addEventListener('load', () => {
         requestAnimationFrame(Animate);
     }
 
-    game.Initialize(canvas).then(
-        Animate
-    );
+    game.Initialize(canvas).then(Animate);
 })

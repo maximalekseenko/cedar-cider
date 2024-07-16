@@ -15,18 +15,52 @@
             <canvas id="canvas"></canvas>
         </div>
         <div style="
-            width: 30%;
+            width: 50%;
             background: gray center / auto 100% no-repeat url('');
+            border: 1px solid gainsboro;
             ">
             <div style="display: flex; flex-direction: column;">
-                <h1 style="text-align: center; background-color: gainsboro;">Press to play animation</h1>
-                <button style="height: 2em;" onclick="module.Anim('idle')">Idle</button>
-                <button style="height: 2em;" onclick="module.Anim('run')">Run</button>
-                <button style="height: 2em;" onclick="module.Anim('jump_up')">Jump_up</button>
-                <button style="height: 2em;" onclick="module.Anim('jump_down')">Jump_down</button>
+                <h2 style="font-size: 1em; text-align: center; background-color: gainsboro;">Press to play:</h2>
+                <input type="button" value="Idle" onclick="module.Anim('idle')">
+                <input type="button" value="Run" onclick="module.Anim('run')">
+                <input type="button" value="Jump_up" onclick="module.Anim('jump_up')">
+                <input type="button" value="Jump_down" onclick="module.Anim('jump_down')">
             </div>
-
+            <div style="display: flex; flex-direction: column;">
+                <h2 style="font-size: 1em; text-align: center; background-color: gainsboro;">Use each at least once:</h2>
+                <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                    <div style="flex: 30%; display: flex; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                    </div>
+                    <div style="flex: 30%; display: flex; flex-wrap: wrap; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input type="radio" name="A">
+                        <input type="radio" name="A">
+                        <input type="radio" name="A">
+                    </div>
+                    <div style="flex: 30%; display: flex; flex-wrap: wrap; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input type="color">
+                    </div>
+                    <div style="flex: 30%; display: flex; flex-wrap: wrap; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input type="file">
+                    </div>
+                    <div style="flex: 30%; display: flex; flex-wrap: wrap; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input style="width: 100%;" type="text">
+                        <input style="width: 100%;" type="password">
+                        <input style="width: 100%;" type="number">
+                    </div>
+                    <div style="flex: 30%; display: flex; flex-wrap: wrap; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input type="datetime-local">
+                    </div>
+                    <div style="flex: 30%; display: flex; flex-wrap: wrap; justify-content: space-around; border: 1px dashed gainsboro;">
+                        <input type="hidden">
+                    </div>
+                </div>
+            </div>
         </div>
+
+    </div>
     </div>
 
     <footer>
@@ -35,10 +69,10 @@
     </footer>
 
     <!-- <script type="module" src="main.js"></script> -->
-     <script>const module = {}</script>
+    <script>const module = {}</script>
     <script type="module">
-        import {game} from "./main.js" ;
-        module.Anim = function(name) { game.player.visualImage.StartAnimation(name) }
+        import { game } from "./main.js";
+        module.Anim = function (name) { game.player.visualImage.StartAnimation(name) }
     </script>
 </body>
 
