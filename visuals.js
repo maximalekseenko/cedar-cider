@@ -174,6 +174,20 @@ export class VisualImageAnimated extends VisualImage {
          */
         this.metadata;
 
+        // Metadata fixes.
+        // - Animation fixes.
+        for (const [_animation_name, _animation_data] of Object.entries(this.metadata.animations)) {
+
+            // Fix animation timestamps.
+            if (_animation_data.timestamps.length == 0)
+                _animation_data.timestamps = Array.from(
+                    { length: _animation_data.frames.length },
+                    (_, _frame_index) => _frame_index / _animation_data.frames.length
+                );
+                console.log(_animation_data.timestamps);
+        }
+
+
 
         this.currentAnimationName = undefined;
         this.currentAnimationStartTime = undefined;
@@ -186,7 +200,7 @@ export class VisualImageAnimated extends VisualImage {
     }
 
 
-    GetCurrentFrame(__default = 0) {
+    __GetCurrentFrame(__default = 0) {
         var _animation = this.metadata.animations[this.currentAnimationName];
         var _frameIndex = 0;
         var _progress = (Date.now() - this.currentAnimationStartTime) / _animation.duration;
@@ -194,8 +208,8 @@ export class VisualImageAnimated extends VisualImage {
         // repeat fix
         if (_animation.repeat) _progress %= 1.0;
 
-        for (let _timestampIndex = 0; _timestampIndex < _animation.timestamps.length; _timestampIndex++) {
-            if (_animation.timestamps[_timestampIndex] >= _progress) {
+        for (let _timestampIndex = _animation.timestamps.length -1; _timestampIndex >= 0; _timestampIndex--) {
+            if (_animation.timestamps[_timestampIndex] <= _progress) {
                 _frameIndex = _timestampIndex;
                 break;
             }
@@ -213,7 +227,7 @@ export class VisualImageAnimated extends VisualImage {
      * @param {{[arg_name:string]: any}} __argv 
      */
     Draw(__context, __x, __y, __argv) {
-        var _frame = this.GetCurrentFrame();
+        var _frame = this.__GetCurrentFrame();
         __context.drawImage(this.image,
             ..._frame,
             __x, __y,

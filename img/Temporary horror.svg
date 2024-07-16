@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" width="20" heigh="40" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 40">
+<svg id="Layer_1" width="80" height="40" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40">
   <defs>
     <style>
       .cls-1 {
@@ -14,6 +14,13 @@
 
       .cls-2 {
         fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+        font-family: Bauhaus-Bold, Bauhaus;
+        font-size: .96px;
+        font-weight: 700;
       }
     </style>
   </defs>
@@ -42,6 +49,14 @@
     <circle class="cls-2" cx="6.81" cy="24.64" r="1.19"/>
   </g>
   <g>
+    <polyline class="cls-1" points="15.62 26 16.21 27.79 16.21 28.98"/>
+    <polyline class="cls-1" points="16.21 26 16.81 27.79 16.81 28.98"/>
+    <polyline class="cls-1" points="13.23 27.02 12.64 28.81 12.64 30"/>
+    <polyline class="cls-1" points="12.64 27.02 12.04 28.81 12.04 30"/>
+    <ellipse class="cls-2" cx="14.13" cy="25.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="16.81" cy="24.64" r="1.19"/>
+  </g>
+  <g>
     <polyline class="cls-1" points="5.62 36.02 6.21 37.81 6.21 39"/>
     <polyline class="cls-1" points="6.21 36.02 6.81 37.81 6.81 39"/>
     <polyline class="cls-1" points="3.23 36.02 2.64 37.81 2.64 39"/>
@@ -50,12 +65,28 @@
     <circle class="cls-2" cx="6.81" cy="34.64" r="1.19"/>
   </g>
   <g>
-    <polyline class="cls-1" points="15.62 37.02 16.21 38.81 16.21 40"/>
-    <polyline class="cls-1" points="16.21 37.02 16.81 38.81 16.81 40"/>
+    <polyline class="cls-1" points="15.62 36.02 16.21 37.81 16.21 39"/>
+    <polyline class="cls-1" points="16.21 36.02 16.81 37.81 16.81 39"/>
     <polyline class="cls-1" points="13.23 36.02 12.64 37.81 12.64 39"/>
     <polyline class="cls-1" points="12.64 36.02 12.04 37.81 12.04 39"/>
     <ellipse class="cls-2" cx="14.13" cy="35.83" rx="3.22" ry="2.15"/>
     <circle class="cls-2" cx="16.81" cy="34.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="25.62 37.02 26.21 38.81 26.21 40"/>
+    <polyline class="cls-1" points="26.21 37.02 26.81 38.81 26.81 40"/>
+    <polyline class="cls-1" points="23.23 36.02 22.64 37.81 22.64 39"/>
+    <polyline class="cls-1" points="22.64 36.02 22.04 37.81 22.04 39"/>
+    <ellipse class="cls-2" cx="24.13" cy="35.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="26.81" cy="34.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="35.62 37.02 36.21 38.81 36.21 40"/>
+    <polyline class="cls-1" points="36.21 37.02 36.81 38.81 36.81 40"/>
+    <polyline class="cls-1" points="33.23 36.02 32.64 37.81 32.64 39"/>
+    <polyline class="cls-1" points="32.64 36.02 32.04 37.81 32.04 39"/>
+    <ellipse class="cls-2" cx="34.13" cy="35.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="36.81" cy="34.64" r="1.19"/>
   </g>
   <g>
     <polyline class="cls-1" points="5.62 7.02 6.21 8.81 6.21 10"/>
@@ -66,11 +97,84 @@
     <circle class="cls-2" cx="6.81" cy="4.64" r="1.19"/>
   </g>
   <g>
-    <polyline class="cls-1" points="15.62 26.02 16.21 27.81 16.21 29"/>
-    <polyline class="cls-1" points="16.21 26.02 16.81 27.81 16.81 29"/>
-    <polyline class="cls-1" points="13.23 26 12.64 27.79 12.64 28.98"/>
-    <polyline class="cls-1" points="12.64 26 12.04 27.79 12.04 28.98"/>
-    <ellipse class="cls-2" cx="14.13" cy="25.83" rx="3.22" ry="2.15"/>
-    <circle class="cls-2" cx="16.81" cy="24.64" r="1.19"/>
+    <polyline class="cls-1" points="35.62 26.02 36.21 27.81 36.21 29"/>
+    <polyline class="cls-1" points="36.21 26.02 36.81 27.81 36.81 29"/>
+    <polyline class="cls-1" points="33.23 26 32.64 27.79 32.64 28.98"/>
+    <polyline class="cls-1" points="32.64 26 32.04 27.79 32.04 28.98"/>
+    <ellipse class="cls-2" cx="34.13" cy="25.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="36.81" cy="24.64" r="1.19"/>
   </g>
+  <g>
+    <polyline class="cls-1" points="25.62 26.02 26.21 27.81 26.21 29"/>
+    <polyline class="cls-1" points="26.21 26.02 26.81 27.81 26.81 29"/>
+    <polyline class="cls-1" points="23.23 26 22.64 27.79 22.64 28.98"/>
+    <polyline class="cls-1" points="22.64 26 22.04 27.79 22.04 28.98"/>
+    <ellipse class="cls-2" cx="24.13" cy="25.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="26.81" cy="24.64" r="1.19"/>
+  </g>
+  <text class="cls-3" transform="translate(1 12)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-3" transform="translate(1 2)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-3" transform="translate(11 12)"><tspan x="0" y="0">1</tspan></text>
+  <g>
+    <polyline class="cls-1" points="25.62 17.02 26.21 18.81 26.21 20"/>
+    <polyline class="cls-1" points="26.21 16.02 26.81 17.81 26.81 19"/>
+    <polyline class="cls-1" points="23.23 16.02 22.64 17.81 22.64 19"/>
+    <polyline class="cls-1" points="22.64 17.02 22.04 18.81 22.04 20"/>
+    <ellipse class="cls-2" cx="24.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="26.81" cy="14.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="35.62 16.02 36.21 17.81 36.21 19"/>
+    <polyline class="cls-1" points="36.21 17.02 36.81 18.81 36.81 20"/>
+    <polyline class="cls-1" points="33.23 17.02 32.64 18.81 32.64 20"/>
+    <polyline class="cls-1" points="32.64 16.02 32.04 17.81 32.04 19"/>
+    <ellipse class="cls-2" cx="34.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="36.81" cy="14.64" r="1.19"/>
+  </g>
+  <text class="cls-3" transform="translate(21 12)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(31 12)"><tspan x="0" y="0">3</tspan></text>
+  <g>
+    <polyline class="cls-1" points="45.62 17.02 46.21 18.81 46.21 20"/>
+    <polyline class="cls-1" points="46.21 16.02 46.81 17.81 46.81 19"/>
+    <polyline class="cls-1" points="43.23 16.02 42.64 17.81 42.64 19"/>
+    <polyline class="cls-1" points="42.64 17.02 42.04 18.81 42.04 20"/>
+    <ellipse class="cls-2" cx="44.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="46.81" cy="14.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="55.62 16.02 56.21 17.81 56.21 19"/>
+    <polyline class="cls-1" points="56.21 17.02 56.81 18.81 56.81 20"/>
+    <polyline class="cls-1" points="53.23 17.02 52.64 18.81 52.64 20"/>
+    <polyline class="cls-1" points="52.64 16.02 52.04 17.81 52.04 19"/>
+    <ellipse class="cls-2" cx="54.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="56.81" cy="14.64" r="1.19"/>
+  </g>
+  <text class="cls-3" transform="translate(41 12)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-3" transform="translate(1 22)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-3" transform="translate(11 22)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-3" transform="translate(21 22)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(31 22)"><tspan x="0" y="0">3</tspan></text>
+  <text class="cls-3" transform="translate(51 12)"><tspan x="0" y="0">5</tspan></text>
+  <g>
+    <polyline class="cls-1" points="65.62 17.02 66.21 18.81 66.21 20"/>
+    <polyline class="cls-1" points="66.21 16.02 66.81 17.81 66.81 19"/>
+    <polyline class="cls-1" points="63.23 16.02 62.64 17.81 62.64 19"/>
+    <polyline class="cls-1" points="62.64 17.02 62.04 18.81 62.04 20"/>
+    <ellipse class="cls-2" cx="64.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="66.81" cy="14.64" r="1.19"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="75.62 16.02 76.21 17.81 76.21 19"/>
+    <polyline class="cls-1" points="76.21 17.02 76.81 18.81 76.81 20"/>
+    <polyline class="cls-1" points="73.23 17.02 72.64 18.81 72.64 20"/>
+    <polyline class="cls-1" points="72.64 16.02 72.04 17.81 72.04 19"/>
+    <ellipse class="cls-2" cx="74.13" cy="15.83" rx="3.22" ry="2.15"/>
+    <circle class="cls-2" cx="76.81" cy="14.64" r="1.19"/>
+  </g>
+  <text class="cls-3" transform="translate(61 12)"><tspan x="0" y="0">6</tspan></text>
+  <text class="cls-3" transform="translate(71 12)"><tspan x="0" y="0">7</tspan></text>
+  <text class="cls-3" transform="translate(1 33)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-3" transform="translate(11 33)"><tspan x="0" y="0">5</tspan></text>
+  <text class="cls-3" transform="translate(21 33)"><tspan x="0" y="0">6</tspan></text>
+  <text class="cls-3" transform="translate(31 33)"><tspan x="0" y="0">7</tspan></text>
 </svg>
