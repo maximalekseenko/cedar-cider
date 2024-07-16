@@ -11,7 +11,6 @@ export class Player {
          * @type {visualsModule.VisualImageAnimated}
          */
         this.visualImage = visualsModule.MakeVisualImage("./img/Temporary horror")
-        console.log(this.visualImage)
         this.visualImage.StartAnimation("run");
     }
 

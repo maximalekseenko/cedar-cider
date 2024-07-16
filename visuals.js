@@ -214,7 +214,6 @@ export class VisualImageAnimated extends VisualImage {
      */
     Draw(__context, __x, __y, __argv) {
         var _frame = this.GetCurrentFrame();
-        console.log(_frame, [this.image.width,this.image.height])
         __context.drawImage(this.image,
             ..._frame,
             __x, __y,
