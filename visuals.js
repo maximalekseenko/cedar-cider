@@ -1,31 +1,38 @@
 /** Module for working with images, that have additional functional, 
- * that are not present in build-in functions.
+ * that is not present in build-in interpretations.
  * 
  * Each image, that you pass into this module's functions must have some additional information in form of json file in same directory.
- * That file is called "image's metadata". Metadata's contains are based on its image's type.
+ * That file is called "image's metadata". Metadata's contains are based on its image's type (Seek bellow).
  * 
  * The product of combining image and its metadata is {@link VisualImage}.
+ * 
  * Images of different types require different {@link VisualImage}s.
+ * To ensure usage of correct images with correct {@link VisualImage}s,
+ * creation of a new instance of {@link VisualImage} should be done through {@link MakeVisualImage} function.
+ * That function finds correct {@link VisualImage} in {@link VISUAL_IMAGE_TYPES} 
+ * by comparing their {@link VisualImage.type} with type in provided image's metadata.
+ * 
  * Here is the list of most commonly used {@link VisualImage}s (for others look in {@link VISUAL_IMAGE_TYPES}):
  * * {@link VisualImageAnimations} is used for an image that contains a series of animations in it.
  * Can be used to represent a character or an object on the scene.
  * * {@link VisualImageParallax} is used for an image that contains multiple layers of images, that imitates depth.
  * Can be used to represent a background.
  * 
- * To ensure usage of correct images with correct {@link VisualImage},
- * creation of a new instance of {@link VisualImage} should be done through {@link MakeVisualImage} function,
- * that sucks all the {@link VisualImage}s from {@link VISUAL_IMAGE_TYPES}, 
- * and compares their {@link VisualImage.type} with type of an image provided by path.
- * 
  * Before creating a {@link VisualImage}, you must load it's image and metadata.
  * To do so, call and await {@link LoadImage} function to finish.
- * **Do not forget to unload images that you no longer need**: Unload specific image(s) with {@link UnloadImage} or all images with {@link UnloadAllImages}.
+ * **Do not forget to unload images that you no longer need**: 
+ * Unload specific image(s) with {@link UnloadImage} or all images with {@link UnloadAllImages}.
  * 
  * {@link VisualImage} has set of functions for interacting with it. 
  * Main one is {@link VisualImage.Draw}. This function will render image on provided canvas and coordinates.
  * The way {@link VisualImage.Draw} behaves and treats coordinates is defined by its type.
  * 
- * If you are planing to make custom type, consider looking at docs of {@link VisualImage} for more information.
+ * If you are planing to make custom type, consider taking a look at docs of {@link VisualImage} for more information.
+ * 
+ * @see {@link LoadImage}
+ * @see {@link MakeVisualImage}
+ * @see {@link VISUAL_IMAGE_TYPES}
+ * @see {@link VisualImage.Draw}
  * 
  * @module visualsModule
  * 
@@ -150,6 +157,9 @@ export class VisualImageAnimated extends VisualImage {
          * 
          * Used only if {@link AnimationData.duration_based} is `true`.
          * 
+         * @property {boolean} repeat
+         * Should animation run in repeat or say on last frame on finish.
+         * 
          * @property  {number[]} timestamps 
          * List of timestamps in seconds from start of animation. 
          * 
@@ -163,7 +173,37 @@ export class VisualImageAnimated extends VisualImage {
          * @type {AnimationsMetadata}
          */
         this.metadata;
+
+
+        this.currentAnimationName = undefined;
+        this.currentAnimationStartTime = undefined;
     }
+
+
+    StartAnimation(__animationName) {
+        this.currentAnimationName = __animationName;
+        this.currentAnimationStartTime = Date.now();
+    }
+
+
+    GetCurrentFrame(__default = 0) {
+        var _animation = this.metadata.animations[this.currentAnimationName];
+        var _frameIndex = 0;
+        var _progress = (Date.now() - this.currentAnimationStartTime) / _animation.duration;
+
+        // repeat fix
+        if (_animation.repeat) _progress %= 1.0;
+
+        for (let _timestampIndex = 0; _timestampIndex < _animation.timestamps.length; _timestampIndex++) {
+            if (_animation.timestamps[_timestampIndex] >= _progress) {
+                _frameIndex = _timestampIndex;
+                break;
+            }
+        }
+
+        return _animation.frames[_frameIndex];
+    }
+
 
     /** 
      * @override
@@ -173,10 +213,15 @@ export class VisualImageAnimated extends VisualImage {
      * @param {{[arg_name:string]: any}} __argv 
      */
     Draw(__context, __x, __y, __argv) {
-        __context.drawImage(this.image, __x, __y);
+        var _frame = this.GetCurrentFrame();
+        console.log(_frame, [this.image.width,this.image.height])
+        __context.drawImage(this.image,
+            ..._frame,
+            __x, __y,
+            _frame[2] * __argv.scale,
+            _frame[3] * __argv.scale,
+        );
     }
-
-    StartAnimation
 }
 
 
@@ -232,6 +277,8 @@ export function MakeVisualImage(__path) {
  * 
  * By default, image extension is `png`, and metadata's is `json`. Use {@link __image_extension} and {@link __metadata_extension} to change this behavior.
  * 
+ * Oh! And when if you use an svg, make sure that `<svg>` element has `width` and `height` parameters set up.
+  * 
  * @see {@link GetImage} to access hashed data.
  * 
  * @see {@link UnloadImage} and {@link UnloadAllImages} to remove data from hash.

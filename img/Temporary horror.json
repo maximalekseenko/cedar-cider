@@ -7,20 +7,22 @@
             "frames": [
                 [ 0, 0, 10, 10 ]
             ],
-            "": 1,
             "duration": 0,
+            "repeat": false,
             "timestamps": [0]
         },
         "run": {
-            "duration": 0.5,
             "frames": [
                 [ 0, 10, 10, 10 ],
                 [ 10, 10, 10, 10 ]
             ],
-            "timestamps": [0, 0.25]
+            "duration": 500,
+            "timestamps": [0, 0.5],
+            "repeat": true
         },
         "jump_up": {
-            "duration": 0.5,
+            "duration": 500,
+            "repeat": false,
             "frames": [
                 [ 0, 20, 10, 10 ],
                 [ 10, 20, 10, 10 ]
@@ -29,6 +31,7 @@
         },
         "jump_down": {
             "duration": 0.5,
+            "repeat": false,
             "frames": [
                 [ 0, 30, 10, 10 ],
                 [ 10, 30, 10, 10 ]

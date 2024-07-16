@@ -17,8 +17,8 @@ export class Game {
      */
     async Initialize(__canvas) {
 
-        __canvas.width = 500;
-        __canvas.height = 500;
+        __canvas.width = 600;
+        __canvas.height = 600;
 
         await Promise.all([
             visualsModule.LoadImage("./img/Temporary horror", "svg")
@@ -32,6 +32,7 @@ export class Game {
      * @param {CanvasRenderingContext2D} __context
      */
     Render(__context) {
-        this.player.Render(__context)
+        __context.clearRect(0,0, __context.canvas.width, __context.canvas.height);
+        this.player.Render(__context);
     }
 }

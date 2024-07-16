@@ -5,13 +5,14 @@ export class Player {
     constructor() {
         this.x = 0;
         this.y = 0;
-        this.w = 100;
-        this.h = 100;
+        this.scale = 25;
 
         /**
-         * @type {VisualImage}
+         * @type {visualsModule.VisualImageAnimated}
          */
         this.visualImage = visualsModule.MakeVisualImage("./img/Temporary horror")
+        console.log(this.visualImage)
+        this.visualImage.StartAnimation("run");
     }
 
     /**
@@ -19,6 +20,6 @@ export class Player {
      * @param {CanvasRenderingContext2D} __context
      */
     Render(__context) {
-        this.visualImage.Draw(__context, this.w, this.h);
+        this.visualImage.Draw(__context, this.x, this.y, { scale: this.scale });
     }
 }

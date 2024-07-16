@@ -12,14 +12,17 @@ body {
 
 
 #runner-canvas {
-    border: 1px dashed gray;
-    border-style: dashed;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+
+    border: 1px dashed gray;
+    border-style: dashed;
+
     max-height: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 
@@ -51,7 +54,7 @@ footer {
     background-color: red;
     opacity: 0%;
     transition: opacity 1s;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -62,7 +65,7 @@ footer {
 }
 
 @media screen and (orientation:portrait) {
-    .portrait-warning {
+    .rotate-warning {
         opacity: 70%;
         animation: transform();
     }
